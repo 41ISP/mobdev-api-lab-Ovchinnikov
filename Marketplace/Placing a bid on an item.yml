@@ -1,0 +1,26 @@
+info:
+  name: Placing a bid on an item
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/items/:id/bids"
+  params:
+    - name: id
+      value: "1790762221996"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "amount": 85000
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
